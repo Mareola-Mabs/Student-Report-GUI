@@ -1,0 +1,18 @@
+/*Adding Necessary Mixins*/
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexChange($change){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $change;
+
+}
+
+@mixin fonts {
+    font-family: 'Noto Sans', sans-serif;
+}

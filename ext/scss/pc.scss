@@ -1,0 +1,432 @@
+/*Importing Necessary CSS Partials*/
+@import 'resets';
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'maps';
+@import 'fonts';
+
+/*Beginning Of Actual Code*/
+
+/*The Warning Page*/
+.warning                                    {position: absolute;
+                                            z-index: 5;
+                                            width: 300vw;
+                                            height: 100%;
+                                            background: red;
+                                            display: none;}
+/*End of Warning Page*/
+.main                                       {width: 100vw;
+                                            height: 100vh;
+                                        
+    &__cover                                    {background: rgba(236, 240, 243, 0.95);
+                                                width: 100%;
+                                                height: 100%;
+                                                z-index: 1;}
+
+    img.main__cover-img                         {width: 100%;
+                                                height: 100%;
+                                                position: relative;
+                                                z-index: -1;
+                                                border: none;}
+
+    &__items                                    {position: absolute;
+                                                top: 0;
+                                                display: flex;
+                                                height: 100%;   
+                                                width: 300vw;}
+
+    &__page-login                               {width: 100vw;
+                                                height: 100%;
+                                                @include flexCenter;
+                                                }
+
+    &__page-login--container                    {width: 300px;
+                                                height: 370px;
+                                                box-shadow: 13px 13px 13px #CBCED1, 
+                                                -8px -8px 16px #FFF;
+                                                border-radius: 20px;
+                                                background: rgba(236, 240, 243, 0.95);
+                                                padding: 20px;
+                                            
+        &.shrink                                    {width: 250px;
+                                                    height: 320px;}
+                                            
+                                                }
+
+    &__page-login--logo                         {width: 75px;
+                                                height: 70px;
+                                                @include flexCenter;
+                                                box-shadow: 6px 6px 8px #CBCED1, 
+                                                -6px -6px 8px #FFF;
+                                                border-radius: 50%;
+                                            
+        // &.shrink                                    {}
+                                            
+                                                }
+
+    img.main__login-logo                        {width: 45px;
+                                                height: 40px;}
+
+    &__page-login--text                         {font-family: 'Source Sans Pro', sans-serif;
+                                                margin-top: 10px;
+                                                font-size: 1.3rem;
+                                                color: #FF812F;
+                                                text-shadow: 1px 1px 2px grey; 
+                                                font-weight: bold;}
+
+    &__page-login--form                         {
+
+        .form                                       {border: none;
+                                                    background: none;
+                                                
+            input[type="text"]                          {margin-top: 10%;
+                                                        background: $register_background;
+                                                        outline: none;
+                                                        box-shadow: inset 8px 8px 8px #CBCED1, 
+                                                        inset -8px -8px 8px #FFF;
+                                                        border-radius: 20px;
+                                                        height: 38px;
+                                                        width: 240px;
+                                                        color: gray;
+                                                        padding-left: 8%;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Source Sans Pro', sans-serif;
+                                                        border: none;
+                                                        font-size: 0.8rem;
+                                                        
+                &:focus::placeholder                        {color: gray;}
+
+                &::placeholder                              {color: rgba(154, 153, 154, 0.5);}
+
+                &.shrink                                    {width: 200px;
+                                                            height: 32px;}
+                                                    
+                                                        }
+
+            input[type="submit"]                        {height: 35px;
+                                                        width: 70%;
+                                                        background: $slider-h1-color;
+                                                        border: none;
+                                                        cursor: pointer;
+                                                        margin-top: 25px;
+                                                        margin-bottom: 10%;
+                                                        box-shadow: 5px 5px 5px #CBCED1, 
+                                                        -5px -5px 5px #FFF;
+                                                        box-sizing: border-box;
+                                                        font-weight: bold;
+                                                        color: rgba(255, 255, 255, 1.0);
+                                                        border-radius: 15px;
+                                                    
+                &.shrink                                    {height: 32px;
+                                                            width: 50%;
+                                                            font-size: 0.8rem;}
+                                                    
+                                                        }
+                                                
+                                                    }
+
+                                                }
+
+    &__page-login--password                     {text-decoration: underline;
+                                                font-family: 'Source Sans Pro', sans-serif;
+                                                font-size: 0.9rem;
+                                                text-shadow: 1px 1px 2px grey; 
+                                                margin-left: 13px;
+                                                margin-top: -3px;
+                                            
+        a                                           {color: $slider-h1-color;}
+
+        &.shrink                                    {font-size: 0.7rem;
+                                                    margin-left: 7px;
+                                                    margin-top: -10px;}
+                                            
+                                                }
+
+    &__page-content                             {width: 100vw;
+                                                border-top: 5px solid $top-border;
+                                                background: rgba(236, 240, 243, 0.95);
+                                                position: relative;}
+
+    &__header                                   {border-top: 5px solid $slider-h1-color;}
+
+    &__header-nav                               {background: $top-border;
+                                                border-radius: 0px 0px 5px 5px;
+                                                padding: 5px;
+                                                padding-bottom: 6px;
+                                                padding-top: 4px;
+                                                @include flexCenter;
+                                                position: absolute;
+                                                top: 0;
+                                                right: 0;
+                                                user-select: none;
+                                                z-index: 2;
+                                                
+                                                
+        a                                           {text-decoration: none;
+                                                    color: rgba(236, 240, 243, 0.95);
+                                                    font-size: 0.8rem;
+                                                    margin: 0 10px;
+                                                   
+            &:hover                                     {text-decoration: underline;}
+                                                
+                                                    }
+
+        div                                         {width: 1.8px;
+                                                    height: 15px;
+                                                    background: rgba(236, 240, 243, 0.95);}
+                                            
+                                                }
+
+    &__header-features                              {border-bottom: 2px solid rgba(34, 119, 153, 1.0);
+                                                    height: 120px;
+                                                    background: linear-gradient(rgba(250, 250, 250, 1.0), rgba(240, 240, 240, 1.0), rgba(255, 255, 255, 1.0));
+                                                    user-select: none;
+                                                    position: relative;}
+
+    &__header-logo                                  {width: 70px;
+                                                    height: 55px;
+                                                    padding: 1.2% 0% 0% 11px;}
+
+    &__header-bottom--nav                          {position: absolute;
+                                                    bottom: 0;
+                                                    left: 20px;
+                                                    display: flex;
+
+        div:nth-child(1)                                {background: rgba(34, 119, 153, 1.0);
+                                                        height: 30px;
+                                                        @include flexCenter;
+                                                        border-radius: 5px 5px 0px 0px;
+                                                        text-decoration: underline;}
+
+        div                                             {background: rgba(153, 153, 153, 0.7);
+                                                        height: 30px;
+                                                        @include flexCenter;
+                                                        border-radius: 5px 5px 0px 0px;
+                                                        text-decoration: none;
+                                                        padding: 10px;
+                                                    
+            &:not(:last-child)                              {margin-right: 10px;}
+                                                    
+                                                        }
+
+
+        a                                               {text-decoration: none;
+                                                        color: rgba(236, 240, 243, 0.95);
+                                                        font-size: 0.8rem;
+                                                    
+            &:hover                                         {text-decoration: underline;}
+                                                        
+                                                        }
+
+
+                                                    }
+
+    &__page-features                                {border-top: 1px solid rgba(121, 173, 196 ,1.0);
+                                                    background: linear-gradient(rgba(233, 246, 255, 1.0), rgba(243, 250, 255,1.0), rgba(236, 240, 243, 0.95));
+                                                    width: 100%;
+                                                    padding-left: 20px;
+                                                    padding-top: 10px;
+                                                    padding-bottom: 50px;
+                                                    padding-right: 20px;
+                                                
+        p.viewing                                       {font-size: 0.75rem;
+                                                        color: rgba(65, 61, 82, 1.0);
+                                                        cursor: default;
+        
+            span                                            {color: rgba(123, 129, 192, 1.0);}
+
+            a                                               {color: rgba(123, 129, 192, 1.0);
+            
+                &:hover                                         {text-decoration: underline;}
+            
+                                                            }
+        
+                                                        }
+
+        p.para__header                                  {font-weight: bold;
+                                                        margin-top: 20px;
+                                                        color: rgba(65, 61, 82, 1.0);}
+
+        p.para__text                                    {color: rgba(65, 61, 82, 1.0);
+                                                        margin-top: 5px;
+                                                        font-size: 0.8rem;}
+                                                
+                                                    }
+
+        &__page-features--div                       {width: 100%;
+                                                    background: rgba(217, 237, 247, 1.0);
+                                                    border: 1px solid rgba(205, 235, 245, 1.0);
+                                                    box-shadow: 1px 1px 2px lightblue;
+                                                    border-radius: 5px;
+                                                    margin-top: 15px;
+                                                    padding: 15px;
+                                                    padding-bottom: 20px;
+                                                
+            p                                           {font-size: 0.8rem;
+                                                        line-height: 25px;
+                
+                span                                        {font-weight: bold;}
+            
+                                                        }
+                                                
+                                                    }
+
+    &__page-features--head                      {width: 100%;
+                                                padding: 7px;
+                                                background: #000;
+                                                border-radius: 5px;
+                                                margin-top: 20px;
+                                                color: rgba(236, 240, 243, 0.95);
+                                                display: flex;
+                                                justify-content: center;
+                                                font-size: 0.8rem;
+                                                outline: 1px solid rgba(87, 87, 87, 0.8);
+                                                box-shadow: 2px 1px 4px rgba(87, 87, 87, 1.0);
+                                                background: linear-gradient(rgba(60, 60, 60, 1.0), rgba(43, 43, 43, 1.0) rgba(24, 24, 24, 1.0));
+                                                
+        &.header                                    {background: linear-gradient(rgba(170, 170, 170, 1.0), rgba(164, 164, 164, 1.0), rgba(154, 154, 154, 1.0));
+                                                    outline: 1px solid rgba(87, 87, 87, 0.2);
+                                                    box-shadow: none;
+                                                    border-bottom-right-radius: 0px;
+                                                    border-bottom-left-radius: 0px;}
+                                                
+                                                }
+
+    &__page-features--para                      {margin-top: 20px;
+                                                font-size: 0.8rem;
+                                                line-height: 20px;
+                                                color: rgba(65, 61, 82, 0.8);
+                                                text-align: justify;}
+
+    &__page-feature__mains                      {width: 100%;
+                                                margin-top: 20px;}
+
+    &__page-table                               {border: 1px solid rgba(230, 230, 230, 1.0);
+                                                background: linear-gradient(rgba(254, 254, 254, 1.0), rgba(233, 233, 233, 1.0), rgba(244, 244, 244, 1.0), rgba(217, 217, 217, 1.0));
+                                                border-radius: 20px;
+                                                margin-top: 25px;
+                                                box-shadow: 2px 1px 4px rgba(162, 163, 165, 0.5);
+                                                
+        table                                       {border-collapse: collapse;
+                                                    border-top: 1px solid rgba(215, 215, 215, 1.0);
+                                                    width: 100%;
+                                                    
+            thead th                                    {padding: 5px;
+                                                        color: rgba(65, 61, 82, 1.0);
+                                                        font-weight: normal;
+                                                        font-size: 0.8rem;
+                                                        border-bottom: 1px solid rgba(215, 215, 215, 1.0);}
+
+            tbody tr                                    {text-align: center;
+                                                        font-size: 0.8rem;
+                                                        background: rgba(255, 255, 255, 0.9);
+                                                        color: rgba(65, 61, 82, 1.0);
+                                                        
+                &:last-child                                {height: 25px;}
+                                                        
+                                                        }
+
+            tbody tr td                                 {padding: 5px;
+                
+                a                                           {text-decoration: none;
+                                                            color: rgba(34, 119, 153, 1.0);
+                        
+                    &:hover                                     {text-decoration: underline;}
+                    
+                                                            }
+                
+                                                        }
+                                                    
+                                                    }
+                                                    
+                                                }
+
+    &__footer                                   {width: 100%;
+                                                border-radius: 5px;
+                                                background: rgba(245, 245, 245, 1.0);
+                                                box-shadow: 2px 1px 4px rgba(87, 87, 87, 1.0);
+                                                outline: 1px solid rgba(255, 255, 255, 0.7);}
+
+    &__table1                                   {width: 100%;
+    
+        table                                       {width: 100%;
+                                                    font-size: 0.75rem;
+                                                    border-collapse: collapse;
+
+            thead th                                    {padding-bottom: 8px;
+                                                        padding-top: 20px;}
+        
+            tbody tr                                    {text-align: center;
+            
+                &:nth-of-type(odd)                          {background: rgba(160, 160, 160, 0.1);}
+                                                        
+                                                        }
+
+            tbody tr td                                 {padding-top: 15px;
+                                                        padding-bottom: 15px;
+                                                        color: rgba(65, 61, 82, 1.0);
+            
+                                                        }
+        
+                                                    }
+    
+                                                }
+
+        /*The Buttons*/
+        button.submits                              {background: rgba(34, 119, 153, 1.0);
+                                                    border: none;
+                                                    width: 100px;
+                                                    height: 30px;
+                                                    border-radius: 5px;
+                                                    color: rgba(236, 240, 243, 0.95);
+                                                    cursor: pointer;
+                                                    font-size: 0.7rem;
+                                                    box-shadow: 1px 1px 2px rgba(22, 79, 102, 1.0);}
+
+        button.expired                              {background: rgba(132, 195, 249, 0.5);
+                                                    box-shadow: 1px 1px 2px rgba(22, 79, 102, 0.5);
+                                                    cursor: default;}
+
+        button.views                                {background: rgba(34, 119, 153, 1.0);
+                                                    border: none;
+                                                    width: 100px;
+                                                    height: 30px;
+                                                    border-radius: 5px;
+                                                    color: rgba(236, 240, 243, 0.95);
+                                                    cursor: pointer;
+                                                    font-size: 0.7rem;
+                                                    box-shadow: 1px 1px 2px rgba(22, 79, 102, 1.0);}
+
+                                                    
+        button.views.expired                        {background: rgba(132, 195, 249, 0.5);
+                                                    box-shadow: 1px 1px 2px rgba(22, 79, 102, 0.5);
+                                                    cursor: default;}
+
+        button.downloads                            {border: none;
+                                                    width: 100px;
+                                                    height: 30px;
+                                                    background: rgba(117, 117, 117, 1.0);
+                                                    border-radius: 5px;
+                                                    font-size: 0.7rem;
+                                                    color: rgba(236, 240, 243, 0.95);
+                                                    cursor: pointer;
+                                                    box-shadow: 1px 1px 2px rgba(22, 79, 102, 0.5);}
+
+        button.downloads.expired                    {background: rgba(117, 117, 117, 0.3);
+                                                    cursor: default;}
+                                                                          
+        /*End of The Buttons*/
+
+
+                                        
+                                            }
+                            
+/*The Warning Message*/
+@media only screen and (max-width: 1000px){
+.warning                                    {display: flex;
+                                            flex-direction: column;}
+
+.main                                       {display: none;}
+}
+/*End of Warning Message*/

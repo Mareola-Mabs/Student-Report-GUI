@@ -1,0 +1,32 @@
+/*Using Functions To Call Partial Maps*/
+@function weights($ok){
+    @return map-get($font-weights, $ok);
+}
+
+@function sizes($ok1){
+    @return map-get($font-sizes, $ok1);
+}
+
+@function bg__overlay($opa){
+    @return rgba(98, 79, 70, $opa);
+}
+
+@function bg__overlay1($opa1){
+    @return rgba(51, 51, 51, $opa1);
+}
+
+@function bg__overlay2($opa2){
+    @return rgba(0, 0, 0, $opa2);
+}
+
+@function btn__overlay($opa3){
+    @return rgba(250, 100, 0, $opa3);
+}
+
+@function slider__btn-overlay($opa4){
+    @return rgba(55, 68, 73, $opa4);
+}
+
+@function nav__color($opa5){
+    @return rgba(51, 51, 51, $opa5);
+}

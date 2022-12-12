@@ -1,0 +1,21 @@
+/*Adding Necessary CSS Resets*/
+body                                        {padding: 0;
+                                            margin: 0;
+                                            height: 100vh;
+                                            width: 100vw;
+                                            box-sizing: border-box;
+                                            font-family: sans-serif;
+                                            overflow: hidden;}
+
+
+html                                        {scroll-behavior: smooth;}
+
+*                                           {padding: 0;
+                                            margin: 0;
+                                            box-sizing: border-box;
+                                            scroll-behavior: smooth;}
+
+h1 ,h2 ,h3, 
+h4,h5,h6,p                                  {margin: 0;}
+
+pre, small, strong                          {margin: 0;}
